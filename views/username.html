@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Username</title>
+    <link rel="stylesheet" href="/css/username.css">
 </head>
 <body>
     <h1 align = "center">Welcome</h1>
-    <form align ="center" method="POST" action="/create-user">
+    <form align ="center" method="POST" action="/users">
         <p>Enter your Username</p>
-        <input type="text" name="username" id="username"><br>
+        <input type="text" name="username" id="username" style="border:1px solid red; 
+        border-radius: 4px;"
+        > <br><br>
         <button type="submit" name="submit">Submit</button>
     </form> 
 </body>

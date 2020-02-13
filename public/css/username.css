@@ -1,0 +1,27 @@
+h1{
+    color:blue;
+}
+
+p{
+ color : green;   
+}
+
+
+input[type=text]:focus{
+    width:inherit;
+    border:1px solid red;
+    border-radius: 4px;
+    outline: none;
+}
+
+button{
+        background-color: blue ;
+        border: none;
+        color: white;
+        border-radius: 4px;
+    }
+
+
+
+
+
