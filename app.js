@@ -8,7 +8,7 @@ const app=express();
 
 const userRoutes=require('./routes/users');
 const usernameRoutes=require('./routes/username');
-const createUserRoutes=require('./routes/create-user');
+//const createUserRoutes=require('./routes/create-user');
 
 app.engine('Handlebars',exphbs());
 app.set('view engine','Handlebars');
@@ -17,7 +17,7 @@ app.use(body_parser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname,"public")));
 
 app.use(usernameRoutes);
-app.use(createUserRoutes);
+//app.use(createUserRoutes);
 app.use(userRoutes);
 
 
