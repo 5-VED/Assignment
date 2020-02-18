@@ -6,17 +6,18 @@ const exphbs = require('express-handlebars');
 
 const app=express();
 
-const userRoutes=require('./routes/users');
 const usernameRoutes=require('./routes/username');
+const userRoutes=require('./routes/users');
+
 //const createUserRoutes=require('./routes/create-user');
 
-app.engine('Handlebars',exphbs());
+app.engine('Handlebars',exphbs({defaultLayout: 'main',extname:'handlebars'}));
 app.set('view engine','Handlebars');
 
 app.use(body_parser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname,"public")));
 
-app.use(usernameRoutes);
+app.use(usernameRoutes.routes);
 //app.use(createUserRoutes);
 app.use(userRoutes);
 
