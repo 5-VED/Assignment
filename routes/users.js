@@ -3,18 +3,9 @@ const path = require('path');
 const rootDir=require('../util/path');
 const router=express.Router();
 const usernameRoutes=require('./username');
+const userController=require('../controllers/users');
 
 
-router.get('/users',(req,res,next)=>{
-    //res.sendFile(path.join(rootDir ,'views', 'users.html'))
-
-    const users=usernameRoutes.users;
-
-    res.render('users',{
-        title:'Users',
-        users:users,
-        hasUsers:users.length > 0
-    });
-});
+router.get('/users',userController.username);
 
 module.exports=router;

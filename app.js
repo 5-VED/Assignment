@@ -17,7 +17,7 @@ app.set('view engine','Handlebars');
 app.use(body_parser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname,"public")));
 
-app.use(usernameRoutes.routes);
+app.use(usernameRoutes);
 //app.use(createUserRoutes);
 app.use(userRoutes);
 
